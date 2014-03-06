@@ -2,7 +2,7 @@ Ideaborough::Application.routes.draw do
   root to: "ideas#index"
 
   resources :accounts, only: [:new, :create]
-  resources :ideas, only: [:index]
+  resources :ideas, only: [:index, :create, :new, :show]
 
   devise_for :users, path: "", path_names: { sign_out: "logout", sign_in: "login", sign_up: "signup",  },
              controllers: { invitations: "users/invitations" },

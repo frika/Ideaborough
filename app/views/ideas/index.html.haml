@@ -1,0 +1,8 @@
+%h1 Ideas
+
+= simple_form_for @idea do |f|
+  = f.input :content
+  = f.submit "Submit idea"
+
+- @ideas.each do |idea|
+  %div= idea.content

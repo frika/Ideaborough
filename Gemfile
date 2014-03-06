@@ -16,7 +16,6 @@ gem 'uglifier',         '>= 1.3.0'
 gem 'unicorn'
 
 group :development, :test do
-  gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'capybara'
@@ -28,6 +27,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'annotate'
   gem 'awesome_print'
   gem 'pry-rails'
 end

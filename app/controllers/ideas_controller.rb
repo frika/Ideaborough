@@ -1,5 +1,8 @@
 class IdeasController < ApplicationController
   before_filter :authenticate_user!
+  respond_to :html
+  respond_to :json
+
   def index
     @idea = Idea.new
     @ideas = Idea.all
@@ -11,7 +14,7 @@ class IdeasController < ApplicationController
 
   def create
     @idea = current_user.ideas.create(idea_params)
-    respond_with @idea
+    respond_with @idea, location: ideas_path
   end
 
   private
