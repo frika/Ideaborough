@@ -1,6 +1,7 @@
 = simple_form_for @account do |f|
   = f.input :name, label: "Account name"
   = f.simple_fields_for :users do |u|
+    = u.input :role, as: :hidden, input_html: { value: "admin" }
     = u.input :first_name
     = u.input :last_name
     = u.input :email

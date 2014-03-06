@@ -5,7 +5,7 @@ class IdeasController < ApplicationController
 
   def index
     @idea = Idea.new
-    @ideas = Idea.all
+    @ideas = current_account.ideas
   end
 
   def new

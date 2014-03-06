@@ -36,4 +36,8 @@ class User < ActiveRecord::Base
   has_many :ideas
 
   validates :account, presence: true
+
+  def admin?
+    true if role == "admin"
+  end
 end
