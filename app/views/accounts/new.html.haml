@@ -1,0 +1,9 @@
+= simple_form_for @account do |f|
+  = f.input :name, label: "Account name"
+  = f.simple_fields_for :users do |u|
+    = u.input :first_name
+    = u.input :last_name
+    = u.input :email
+    = u.input :password
+    = u.input :password_confirmation
+  = f.submit "Sign up"
