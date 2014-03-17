@@ -1,0 +1,5 @@
+.comment-form-wrapper
+  = simple_form_for(:comment, remote: true, html: { class: "comment-form inline-input-form"} ) do |f|
+    = f.input :content, as: :text, label: false, input_html: { value: nil, class: 'comment-input', placeholder: "Create a comment" }, wrapper_html: { class: 'comment-input-wrapper' }
+    = f.button :button, class: 'comment-form-submit', disabled: true do
+      Post <kbd>⌘↵</kbd>

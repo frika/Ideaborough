@@ -6,3 +6,4 @@
 
 - @ideas.each do |idea|
   %div= idea.content
+  = render partial: 'comments/form', locals: { comment: Comment.new }

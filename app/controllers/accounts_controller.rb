@@ -1,4 +1,6 @@
 class AccountsController < ApplicationController
+  layout "external"
+
   respond_to :html
 
   def new

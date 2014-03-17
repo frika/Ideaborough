@@ -10,8 +10,8 @@
 #
 
 class Idea < ActiveRecord::Base
+  has_many :comments, as: :commentable, inverse_of: :commentable, dependent: :destroy
   belongs_to :user
-
 
   #-----------------------------------------------------------------------------
   # Scope
