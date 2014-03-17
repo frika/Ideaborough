@@ -1,0 +1,16 @@
+@namespace 'Ideaborough', (exports) ->
+  exports.templates = Thorax.templates = Handlebars.templates = HandlebarsTemplates || {}
+  exports.Views = Thorax.Views
+  exports.Models = Thorax.Models
+  exports.Collections = Thorax.Collections
+
+  exports.csrfToken = $("meta[name=csrf-token]").attr("content")
+  exports.csrfParam = $("meta[name=csrf-param]").attr("content")
+
+  exports.csrfData = {}
+  exports.csrfData[exports.csrfParam] = exports.csrfToken
+
+  exports.config = {
+    env: "<%= Rails.env %>"
+    assetHost: "<%= ActionController::Base.asset_host %>"
+  }
