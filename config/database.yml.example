@@ -3,21 +3,15 @@ development:
   encoding: unicode
   database: ideaborough_development
   pool: 5
-  username: USERNAME
-  password:
 
 test:
   adapter: postgresql
   encoding: unicode
   database: ideaborough_test
   pool: 5
-  username: USERNAME
-  password:
 
 production:
   adapter: postgresql
   encoding: unicode
   database: ideaborough_production
   pool: 5
-  username: USERNAME
-  password:
